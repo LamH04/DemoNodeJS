@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Demo Chat</title>
+    <script src="jquery.min.js"></script>    
+    <script src="https://lamhuynhonline.herokuapp.com/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="layout.css" />
+</head>
+<body>
+    <div id="wrapper">
+        <div id="loginForm">
+            <h3>WHAT'S YOUR NAME</h3>
+            <input type="text" placeholder="Tên của bạn" id="txtNameRegister" />
+            <input type="button" id="btnRegister" value="Register" />
+        </div>
+        <div id="chatForm" hidden>
+            <div id="userOnline">
+                <div style="border: solid 1px black; padding: 5px; text-align: center;">User Online</div>
+                <div id="listOnline">
+                </div>
+            </div>        
+            <div id="contentChat">
+                <div style="border: solid 1px black; padding: 5px; text-align: right;">
+                    Hello <span id="userName"></span> <input type="button" value="Logout" id="btnLogout"/>
+                </div>
+                <div id="listContent">
+
+                </div>
+                <input type="text" id="txtMsg" placeholder="Nhap noi dung o day" />            
+                <input type="button" id="btnSend" value="Send" />            
+            </div>
+        </div>
+    </div>
+    <video id="liveStreamVideo" controls width="300";></video>
+</body>
+</html>
